@@ -1,7 +1,7 @@
 #include<stdio.h>
 #include<string.h>
 int main() {
-   int a[1000],b[1000],i,j,N,temp;
+   int a[1000],b[1000],i,j,N,temp,k;
    scanf("%d",&N);
    for(i=0;i<N;i++)
    {
@@ -13,7 +13,8 @@ int main() {
        {
            if(a[i]==a[j])
            {
-               b[i]=a[i];
+               b[k]=a[i];
+               k++;
            }
        }
    }
@@ -29,9 +30,19 @@ int main() {
             }
         }
     }
-    for(i=0;i<N;i++)
+    if(b[0]!='\0')
     {
-       printf("%d",b[i]);
+        for (i=0;b[i]!='\0';i++)
+        {
+            if (b[i]!= b[i+1])
+            {
+                printf("%d",b[i]);
+            }
+            continue;
+        }
+    }else
+    {
+        printf("unique");
     }
     
 }
