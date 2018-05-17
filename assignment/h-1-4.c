@@ -1,5 +1,4 @@
 #include<stdio.h>
-#include<string.h>
 int main() {
    int a[1000],i,j,N,c;
    scanf("%d",&N);
@@ -12,7 +11,6 @@ int main() {
         c=0;
         for (j=0;a[j]!='\0';j++)
         {
-            
             if (a[j]==a[i]) 
             {
                 c++;
