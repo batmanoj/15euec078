@@ -1,6 +1,6 @@
 #include<stdio.h>
 int main() {
-   int a[1000],i,j,N,c;
+   int a[1000],i,j,N,c,b=0;
    scanf("%d",&N);
    for(i=0;i<N;i++)
    {
@@ -18,8 +18,14 @@ int main() {
         }
         if(c!=1)
         {
-            printf("%d",a[i]);
             break;
         }
+    }
+    if(b=0)
+    {
+        printf("unique");
+    }else
+    {
+        printf("%d",a[i]);
     }
 }
